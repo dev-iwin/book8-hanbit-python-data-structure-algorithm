@@ -19,7 +19,6 @@ print("")
 print("=====" * 10)
 print("")
 
-num2 = 12
-myComprehension = [num2 for num2 in range(12, 0, -1)]
+
+myComprehension = [[i-k for i in range(12, 9, -1)] for k in range(0, 12, 3)]
 print(myComprehension)
-# 2차원 리스트 컴프리헨션으로는, 값이 하나씩 감소하는 4행 3열 리스트를 못 만드나?
