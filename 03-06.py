@@ -23,8 +23,7 @@ def calcPoly(xVal,t_x, p_x):
     for i in range(len(p_x)):
         term = t_x[i]
         coef = p_x[i]
-        retValue += coef * xVal ** term
-        term -= 1
+        retValue += coef * (xVal ** term)
 
     return retValue
 
