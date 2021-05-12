@@ -1,8 +1,7 @@
-##  자동 로또 번호 생성기 ver2 ##
-##  동일한 줄을 제거하는 버전 ##
+##  자동 로또 번호 생성기 : my ver ##
+##  동일한 줄을 제거하는 명령 1줄 추가 ##
 
 import random
-
 
 allLotto = []
 oneLotto = []
@@ -12,9 +11,9 @@ numLotto = 0
 print("** 로또 번호 생성을 시작합니다. **")
 count = int(input("로또를 몇 줄 구매할까요? --> "))
 
-while len(allLotto) <= count-1:
-    random.seed(i)
-    while len(oneLotto) <= 6:
+while len(allLotto) <= count-1:  # 길이가 5일 때도 참이 되면, 한 줄 더 추가해서 6이 된다.
+    random.seed()
+    while len(oneLotto) <= 6:  # 그럼 이건 왜 숫자가 7개 뽑히지 않는 거지?
         numLotto = random.randint(1, 45)
         if numLotto not in oneLotto:
             oneLotto.append(numLotto)
