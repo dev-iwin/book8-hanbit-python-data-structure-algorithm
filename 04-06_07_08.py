@@ -46,6 +46,7 @@ def deleteNode(deleteData):
         current = head
         head = head.link
         del(current)
+        print("# 첫 노드가 삭제됨 #")
         return
 
     current = head
@@ -55,7 +56,21 @@ def deleteNode(deleteData):
         if current.data == deleteData:
             pre.link = current.link
             del(current)
+            print("# 중간 노드가 삭제됨 #")
             return
+    print("# 삭제된 노드가 없음 #")
+
+def findNode(findData):  # 왜 노드 전체를 반환하게 할까?
+    global memory, head, current, pre
+
+    current = head
+    if current.data == findData:
+        return current
+    while current.link != None:
+        current = current.link
+        if current.data == findData:
+              return current
+    return Node()
 
 ## 04-05_06_07 전역 변수 선언
 memory = []
@@ -99,3 +114,15 @@ if __name__ == '__main__':
 
     deleteNode("재남")
     printNodes(head)
+    print("04-08 단순연결리스트에 노드 검색")
+    fNode = findNode("화사")
+    print(fNode.data)
+
+    fNode = findNode("솔라")
+    print(fNode.data)
+
+    fNode = findNode("문별")
+    print(fNode.data)
+
+    fNode = findNode("재남")
+    print(fNode.data)
