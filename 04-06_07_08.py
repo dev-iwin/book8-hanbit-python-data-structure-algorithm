@@ -60,7 +60,7 @@ def deleteNode(deleteData):
             return
     print("# 삭제된 노드가 없음 #")
 
-def findNode(findData):  # 왜 노드 전체를 반환하게 할까?
+def findNode(findData):  # 왜 노드 전체를 반환하게 할까? : 항상 출력을 원하는 것이 아니고, 노드를 추출하는 기능만 필요할 수 있으니까! 그래서 빈 노드도 나름 의미가 되나보다.
     global memory, head, current, pre
 
     current = head
