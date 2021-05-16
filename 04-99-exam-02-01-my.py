@@ -8,8 +8,6 @@ class Node():
         self.link = None
 
 def printNodes(start):
-    # 근데, head를 인수로 전달할 게 아니라, 단순연결리스트 이름을 넣으면, head부터 훑게 만들어야 하지 않을까?
-    # 출력할 때 memory를 출력해야 하는지, head를 넣으면 되는지 헷갈려서 순간 한 번 더 생각하게 만드는 비효율이 나오는데?
     current = start
     if current == None:
         return
@@ -44,7 +42,6 @@ def makeLottoList(num):
 ## 전역 변수
 memory = []
 head, current, pre = None, None, None
-
 
 ## 메인 코드
 if __name__ == "__main__":

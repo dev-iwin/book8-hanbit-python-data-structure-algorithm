@@ -32,16 +32,16 @@ def makeSinglyLinkedList(nameEmail):
         head = node
         return
 
-#   current = head      # 아래줄을 head라고 명시적으로 쓰면 여기에 나올 필요 없음?
+#   current = head      # 아래줄을 head라고 명시적으로 쓰면 여기에 나올 필요 없음. : 남이 보기 좋은 코드가 better
 #   if current.data[1] > nameEmail[1]:
-    if head.data[1] > nameEmail[1]:     # 의미(첫 노드와의 비교)도 직관wjr
+    if head.data[1] > nameEmail[1]:     # 의미(첫 노드와의 비교)도 직관적
         node.link = head
         head = node
         return
     
     current = head
     while current.link != None:
-        pre = current           # 위에 주석처리 한 것처럼 하면, if문 전에 이 작업 안 해도 되지 않을까?
+        pre = current           # 위에 주석처리 한 것처럼 하면, if문 전에 이 작업 안 해도 되지 않을까? -- 아닌듯
         current = current.link
         if current.data[1] > nameEmail[1]:
             node.link = current
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     while True:
         name = input("이름 --> ")
         if name == "" or name == None:
-            break    # 왜 이름만 이렇게 해놨지?
+            break   # 이름에서 엔터 누르면 종료되게 했음
         email = input("이메일 --> ")
         makeSinglyLinkedList([name, email])  # 이렇게 바로 넣어도 되는군
         printNodes(head)

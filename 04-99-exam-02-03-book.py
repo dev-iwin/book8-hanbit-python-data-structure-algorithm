@@ -50,10 +50,10 @@ def findNumber(num):
     # findData = num    # 한 번만 쓸거라, 변수를 생성할 필요가 없었네.
 
     if head == None:    # 단순연결리스트가 비어있으면- 이라는 뜻
-       return False     # 근데 이런 의미를 살리려면 "단순 연결 리스트에 데이터 개수가 0이니?"이런 식으로 점검하는 논리 구조를 만들어야 하는 거 아닌가?
-                        # 이걸 글로벌 전역변수 head를 가져와서 "이 포인터가 존재해?"라고 묻는 건 너무 우회적이고 간접적인 거 아닌가?? 아닌가 효율적인가?
+       return False
+
     current = head
-    if current.data == num:     # 굳이 이렇게 같은 if문을 while문 밖에 안에 쓰게 된단 말이지...?? 그러나 오류의 위험은 없는 단순한 코드. 심플이즈베스트
+    if current.data == num:     # 굳이 이렇게 같은 if문을 while문 밖과 안에 쓰게 된단 말이지...?? 다른 방법 없나??
         return True
     while current.link != None:
         current = current.link
